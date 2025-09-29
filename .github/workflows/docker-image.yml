@@ -13,7 +13,8 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
-
+      - name: Debug username
+        run: echo "DockerHub username is ${{ secrets.DOCKERHUB_USERNAME }}"
       - name: Log in to DockerHub
         uses: docker/login-action@v2
         with:
