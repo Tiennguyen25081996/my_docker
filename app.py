@@ -14,7 +14,7 @@ def hello():
 
 @app.route("/api/index", methods = ["GET"])
 def Index():
-    return jsonify({"message":"Hello REST API GET hihi"})
+    return jsonify({"message":"Hello REST API GET hihi."})
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)
