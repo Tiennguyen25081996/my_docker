@@ -4,14 +4,18 @@
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 from flask import Flask
+import jsonify
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
     return "Hello World from Docker + PyCharm!"
 
-# Press the green button in the gutter to run the script.
+
+@app.route("/api/index", methods = ["GET"])
+def Index():
+    return jsonify({"message":"Hello REST API GET"})
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
